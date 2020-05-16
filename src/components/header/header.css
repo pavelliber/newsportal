@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #C4C4C4;
+    padding-right: 30px;
+}
+
+.header-left-bg {
+    width: 200px;
+    height: 100px;
+    background-color: #5B5B5B;
+}
+
+.header-left-bg h1 {
+    position: absolute;
+    font-size: 36px;
+    color: #FFFFFF;
+    left: 130px;
+}
