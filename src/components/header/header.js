@@ -1,6 +1,6 @@
 import React from "react";
 import './header.css';
-import UserProfile from "./UserProfile";
+import UserProfile from "./user-profile";
 
 const Header = () => {
     return (
