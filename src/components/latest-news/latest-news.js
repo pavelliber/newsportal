@@ -13,7 +13,7 @@ export default class LatestNews extends Component {
 
     render () {
 
-        const newslist = this.state.newslist;
+        const {newslist} = this.state;
 
         return (
             <div className="latest-news">
