@@ -31,7 +31,7 @@ export default class App extends Component {
                 <Header />
                 <SearchBar />
                 <TopNews />
-                <LatestNews newslist={this.state.newslist}  />
+                <LatestNews newslist={newslist}  />
             </div>
         )
     }

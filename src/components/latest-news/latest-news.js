@@ -17,9 +17,9 @@ export default class LatestNews extends Component {
 
         return (
             <div className="latest-news">
-                {Array.prototype.map.call(newslist, function (item) {
-                    return <NewsItem newsitem={item} />
-                }, this)}
+                {newslist.map(
+                    (item, index) => <NewsItem key={`item${index}`} newsitem={item} />
+                )}
             </div>
         )
     }

@@ -2,10 +2,10 @@ import React from "react";
 import './news-item.css';
 
 const NewsItem = ({newsitem}) => {
-    const bgColor = newsitem.color;
+    const {color, topic} = newsitem;
     return (
-        <div className="news-item" style={{backgroundColor: bgColor}}>
-            {newsitem.topic}
+        <div className="news-item" style={{backgroundColor: color}}>
+            {topic}
         </div>
     )
 }
