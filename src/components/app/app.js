@@ -18,7 +18,7 @@ export default class App extends Component {
                 {topic:'topic 3', color:'#C45252'},
                 {topic:'topic 4', color:'#E1DBA5'},
                 {topic:'topic 5', color:'#C4C4C4'},
-                {topic:'topic 6', color:'#E7D1F8'}
+                {topic:'topic 6', color:'#E7D1F9'}
             ]
         }
     }
