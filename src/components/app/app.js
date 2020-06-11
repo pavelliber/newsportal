@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import {Switch, Route, Router} from 'react-router-dom';
 
-import Header from "../header/header";
-import SearchBar from "../search/search-bar";
-
 import './app.css';
-import MainPage from "../main-page/main-page";
-import SearchResults from "../search-results/search-results";
-import history from "../../services/history";
-import Article from "../article/article";
+
+import Header from "../header";
+import SearchBar from "../search";
+import MainPage from "../main-page";
+import SearchResults from "../search-results";
+import Article from "../article";
+
+import history from "../../services";
 
 
 export default class App extends Component {

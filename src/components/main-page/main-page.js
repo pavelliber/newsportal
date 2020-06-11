@@ -1,6 +1,6 @@
 import React from "react";
-import TopNews from "../top-news/top-news";
-import LatestNews from "../latest-news/latest-news";
+import TopNews from "../top-news";
+import LatestNews from "../latest-news";
 
 const MainPage = ({newsitems}) => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import './search-result-item.css';
-import history from "../../services/history";
+import history from "../../services";
 
 const SearchResultItem = ({searchResult}) => {
     const {id, text, topic, img} = searchResult;
