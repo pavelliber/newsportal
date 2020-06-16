@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AuthContext } from "../../services";
 
-const withData = (WrappedComponent, getDataFunction, getLimitedDataFunction) => {
+const withData = (WrappedComponent, getDataFunction, getLimitedDataFunction = undefined) => {
 
     return class extends Component {
 
@@ -12,9 +12,11 @@ const withData = (WrappedComponent, getDataFunction, getLimitedDataFunction) => 
         static contextType = AuthContext;
 
         componentDidMount() {
-            (this.context ?
-                getDataFunction(this.props.apiData) :
-                getLimitedDataFunction(this.props.apiData))
+
+            ((this.context === false && getLimitedDataFunction) ?
+                getLimitedDataFunction(this.props.apiData) :
+                getDataFunction(this.props.apiData)
+                )
                 .then((data) => {
                     this.setState({
                         data

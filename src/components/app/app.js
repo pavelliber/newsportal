@@ -18,7 +18,7 @@ export default class App extends Component {
 
     render () {
 
-        const loggedInStatus = false;
+        const loggedInStatus = true;
 
         return (
             <ErrorWrapper>
