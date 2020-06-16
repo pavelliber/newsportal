@@ -14,7 +14,7 @@ const Article = ({ data }) => {
             <div className='article-img-container'>
                 <img src={img} alt="news" />
             </div>
-            <div>
+            <div className="article-header">
                 <h2>{topic}</h2>
                 <p>{text}</p>
             </div>
