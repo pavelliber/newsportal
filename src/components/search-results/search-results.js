@@ -1,27 +1,19 @@
-import React, {Component} from "react";
+import React from "react";
 import SearchResultItem from "./search-result-item";
+import withData from "../hoc";
+import {APIService} from "../../services";
 
-export default class SearchResults extends Component {
+const SearchResults = ({articleId, data }) => {
 
-    constructor(props) {
-
-        super(props);
-
-        this.state = {searchResults: props.searchResults};
-    }
-
-    render () {
-
-        const {searchResults} = this.state;
-
-        return (
-            <div>
-                {searchResults.map(
-                    (item, index) => <SearchResultItem key={`item${index}`} searchResult={item} />
-                )}
-            </div>
-        )
-    }
-
+    return (
+        <div>
+            {data.map(
+                (item, index) => <SearchResultItem key={`item${index}`} searchResult={item} />
+            )}
+        </div>
+    )
 
 }
+
+const { getSearchResults } = new APIService();
+export default withData(SearchResults, getSearchResults);

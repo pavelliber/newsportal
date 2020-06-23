@@ -1,14 +1,19 @@
 import React from "react";
 import TopNews from "../top-news";
 import LatestNews from "../latest-news";
+import {APIService} from "../../services";
+import withData from "../hoc";
 
-const MainPage = ({newsitems}) => {
+const MainPage = ( {data} ) => {
+
     return (
         <div>
             <TopNews />
-            <LatestNews newslist={newsitems} />
+            <LatestNews newslist={data} />
         </div>
     )
+
 }
 
-export default MainPage;
+const { getMainNewsList } = new APIService();
+export default withData(MainPage, getMainNewsList);
